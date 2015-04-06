@@ -29,8 +29,9 @@ class Host: NSObject, NSCoding {
     
     
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(type, forKey:"type")
         aCoder.encodeObject(name, forKey:"name")
+        aCoder.encodeObject(type, forKey:"type")
+        
     }
     
     func commandString()->String?

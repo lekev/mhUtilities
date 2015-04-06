@@ -10,28 +10,29 @@ import PreferencePanes
 
 class MhUtilsPref:NSPreferencePane  {
     
-    let domainName = "co.il.myheritage.MhUtils"
+    let domainName = "com.myheritage.MhUtils"
     var hosts :[Host]!
     
+    @IBOutlet var textErr: NSTextView!
     @IBOutlet weak var tableHosts: NSTableColumn!
     
     override func mainViewDidLoad(){
         
-         var preferences = NSUserDefaults.standardUserDefaults()
-            .persistentDomainForName(domainName)
+        var preferences = NSUserDefaults.standardUserDefaults().persistentDomainForName(domainName) as? [String: AnyObject]
         
-        if let hostsData = preferences?["hosts"] as? [NSData] {
-            
-            
-            for (index, hostSerial) in enumerate(hostsData) {
-                let host: Host! = NSKeyedUnarchiver.unarchiveObjectWithData(hostSerial as NSData) as? Host
-                
-                //push to hosts array
-                hosts.append(host)
-            }
+        if preferences == nil {
+            preferences = [:]
         }
         
+        NSKeyedUnarchiver.setClass(Host.self, forClassName: "Host")
         
+        NSKeyedArchiver.setClassName("Host", forClass: Host.self)
+        
+        if let hostsArchived: AnyObject = preferences?["hosts"]  {
+            hosts = NSKeyedUnarchiver.unarchiveObjectWithData(hostsArchived as NSData) as [Host]
+        } else {
+            hosts = []
+        }
         
         
     }

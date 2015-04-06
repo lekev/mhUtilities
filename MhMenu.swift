@@ -17,6 +17,9 @@ class MhMenu: NSMenu {
     var hosts :[Host]!
     var currentHost :Host!
     
+    @IBAction func quit(sender: AnyObject) {
+         NSApplication.sharedApplication().terminate(nil)
+    }
 
     func onClickHost(sender: NSMenuItem) -> Bool {
         
@@ -35,8 +38,12 @@ class MhMenu: NSMenu {
         }
         else
         {
+            
             currentHost = host
         }
+        
+        global.statusItem.title = currentHost.name
+        
         return true
     }
     
@@ -70,11 +77,15 @@ class MhMenu: NSMenu {
     func refreshFromPreferences(){
         
         let defaults = NSUserDefaults.standardUserDefaults()
-        var hostsSerialArr: [AnyObject]! = defaults.arrayForKey("hosts")
         
-        hosts = []
-        for (index, hostSerial) in enumerate(hostsSerialArr) {
-            let host: Host! = NSKeyedUnarchiver.unarchiveObjectWithData(hostSerial as NSData) as? Host
+        if let hostsArchived: AnyObject = defaults.objectForKey("hosts") {
+            hosts = NSKeyedUnarchiver.unarchiveObjectWithData(hostsArchived as NSData) as [Host]
+        } else {
+            hosts = []
+        }
+        
+        for (index, host) in enumerate(hosts) {
+            
             var newItem = NSMenuItem()
             newItem.title = host.name
             newItem.action = Selector("onClickHost:")
@@ -85,11 +96,10 @@ class MhMenu: NSMenu {
                 stagingMenu.addItem(newItem)
             }else
             {
-                self.addItem(newItem)
+                self.insertItem(newItem, atIndex: 0)
+                
             }
             
-            //push to hosts array
-            hosts.append(host)
         }
         
         

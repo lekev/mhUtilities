@@ -39,6 +39,11 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <PathRunnable
+         runnableDebuggingMode = "0"
+         BundleIdentifier = "com.apple.systempreferences"
+         FilePath = "/Applications/System Preferences.app">
+      </PathRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -48,6 +53,12 @@
             ReferencedContainer = "container:mhUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "/Library/PreferencePanes/MhUtilsPref.prefPane"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

@@ -9,56 +9,56 @@
 import Cocoa
 
 
+struct global {
+    // make a status bar that has variable lenght
+    // (as opposed to being a standard square size)
+    // -1 to indication "variable length"
+    static let statusItem: NSStatusItem =  NSStatusBar.systemStatusBar().statusItemWithLength(-1)
+    
+}
+
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var window: NSWindow!
     
     @IBOutlet  var statusMenu: MhMenu!
-    
-    var hostsArr :[Host]!
-    
-    var currentHost: Host!
-    var statusItem: NSStatusItem!
 
+    
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         
-         // Register the preference defaults
-        var appDefaults = [
-            "hosts": [
-                NSKeyedArchiver.archivedDataWithRootObject(Host(name: "localhost", type: "localhost")),
-                NSKeyedArchiver.archivedDataWithRootObject(Host(name: "Production", type: "production")),
-                NSKeyedArchiver.archivedDataWithRootObject(Staging(num: 133))
-            ]
-        ]
+        // Register the preference defaults
+        let localhost = Host(name: "Localhost", type: "localhost")
+        let production = Host(name: "Production", type: "production")
         
-        NSUserDefaults.standardUserDefaults().registerDefaults(appDefaults)
-       
+        let hosts = [production, localhost]
         
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(NSKeyedArchiver.archivedDataWithRootObject(hosts), forKey: "hosts")
         
-        // make a status bar that has variable lenght
-        // (as opposed to being a standard square size)
-        // -1 to indication "variable length"
-        
-         statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
+        // Define StatusItem
         
         // set the text that appears in the menu bar
-        statusItem.title = "MH"
-        statusItem.length = 100
-        statusItem.image = NSImage(named: "logonh")
-        
+        global.statusItem.title = "MH"
+        global.statusItem.length = 100
+        global.statusItem.image = NSImage(named: "logonh")
         // set if the item should change color when clicked
-        statusItem.highlightMode = true
-        statusMenu.refreshFromPreferences()
-        statusItem.menu = statusMenu
+        global.statusItem.highlightMode = true
+        global.statusItem.menu = statusMenu
         
-                
+        // Construct Host menu from user preference.
+        statusMenu.refreshFromPreferences()
+        
+        
     }
+    
+    
     
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+        
     }
     
-    
 }
+
+
 

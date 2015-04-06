@@ -10,14 +10,14 @@
 	<string>mhUtils</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>3B953E83643DCDCF0D6A5705D3745B25F032C291</key>
+		<key>712AF5884859497114A27D780D8293558928355C</key>
 		<string>https://github.com/lekev/mhUtils.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>mhUtils.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>3B953E83643DCDCF0D6A5705D3745B25F032C291</key>
+		<key>712AF5884859497114A27D780D8293558928355C</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>3B953E83643DCDCF0D6A5705D3745B25F032C291</string>
+	<string>712AF5884859497114A27D780D8293558928355C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3B953E83643DCDCF0D6A5705D3745B25F032C291</string>
+			<string>712AF5884859497114A27D780D8293558928355C</string>
 			<key>IDESourceControlWCCName</key>
 			<string>mhUtils</string>
 		</dict>

@@ -26,6 +26,9 @@
                 <menuItem isSeparatorItem="YES" title="Staging" id="v8q-JW-JsO"/>
                 <menuItem title="Quit" id="tbw-jL-S2P">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quit:" target="aCP-k2-SKO" id="NcA-rI-7si"/>
+                    </connections>
                 </menuItem>
             </items>
             <connections>

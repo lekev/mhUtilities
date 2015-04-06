@@ -25,7 +25,7 @@
 	<key>NSMainNibFile</key>
 	<string>MhUtilsPref</string>
 	<key>NSPrefPaneIconFile</key>
-	<string>MhUtilsPref.tiff</string>
+	<string>logopref.tiff</string>
 	<key>NSPrefPaneIconLabel</key>
 	<string>MhUtilsPref</string>
 	<key>NSPrincipalClass</key>

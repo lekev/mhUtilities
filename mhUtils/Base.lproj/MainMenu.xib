@@ -23,6 +23,36 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Staging" id="0PU-9S-VfC"/>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="LG5-KB-31E"/>
+                <menuItem title="Vagrant" id="J15-eF-fSh" customClass="VagrantMenu" customModule="mhUtils" customModuleProvider="target">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Vagrant" id="Q9v-51-yGc">
+                        <items>
+                            <menuItem title="Halt" image="NSStopProgressTemplate" id="RTo-Lf-Mlt">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Provison" image="NSActionTemplate" id="maB-hY-Ax6">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Reload" image="NSRefreshTemplate" id="tfi-is-3RO">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Resume" image="NSLockUnlockedTemplate" id="l64-gW-I8d">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Suspend" image="NSLockLockedTemplate" id="wc6-ZK-gao">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Up" image="NSGoRightTemplate" id="DVr-vg-BVH">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="S8m-6M-nOL"/>
+                            <menuItem title="SSH" image="NSFollowLinkFreestandingTemplate" id="cG4-SS-jjC">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" title="Staging" id="v8q-JW-JsO"/>
                 <menuItem title="Quit" id="tbw-jL-S2P">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -37,4 +67,13 @@
             <point key="canvasLocation" x="315.5" y="282.5"/>
         </menu>
     </objects>
+    <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSFollowLinkFreestandingTemplate" width="14" height="14"/>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
+        <image name="NSLockLockedTemplate" width="10" height="14"/>
+        <image name="NSLockUnlockedTemplate" width="10" height="14"/>
+        <image name="NSRefreshTemplate" width="11" height="15"/>
+        <image name="NSStopProgressTemplate" width="11" height="11"/>
+    </resources>
 </document>

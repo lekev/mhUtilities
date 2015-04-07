@@ -22,6 +22,8 @@
 		C57DDEA41AC826F80001E689 /* MhMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57DDEA31AC826F80001E689 /* MhMenu.swift */; };
 		C5D9B05D1AD1F56D00862C80 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9B05B1AD1F56D00862C80 /* Host.swift */; };
 		C5D9B05E1AD1F56D00862C80 /* Staging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9B05C1AD1F56D00862C80 /* Staging.swift */; };
+		C5D9B0621AD2BE0B00862C80 /* VagrantMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9B0611AD2BE0B00862C80 /* VagrantMenu.swift */; };
+		C5D9B0641AD2E07E00862C80 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9B0631AD2E07E00862C80 /* Utils.swift */; };
 		C5FA82D21ACAECF20013C54B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA82D11ACAECF20013C54B /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		C57DDEA31AC826F80001E689 /* MhMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MhMenu.swift; sourceTree = "<group>"; };
 		C5D9B05B1AD1F56D00862C80 /* Host.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
 		C5D9B05C1AD1F56D00862C80 /* Staging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Staging.swift; sourceTree = "<group>"; };
+		C5D9B0611AD2BE0B00862C80 /* VagrantMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VagrantMenu.swift; sourceTree = "<group>"; };
+		C5D9B0631AD2E07E00862C80 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C5FA82D11ACAECF20013C54B /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +139,7 @@
 			children = (
 				C57DDE961AC6EF690001E689 /* STPrivilegedTask.h */,
 				C57DDE971AC6EF690001E689 /* STPrivilegedTask.m */,
+				C5D9B0631AD2E07E00862C80 /* Utils.swift */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				C57DDEA31AC826F80001E689 /* MhMenu.swift */,
+				C5D9B0611AD2BE0B00862C80 /* VagrantMenu.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -373,11 +379,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C57DDEA41AC826F80001E689 /* MhMenu.swift in Sources */,
+				C5D9B0621AD2BE0B00862C80 /* VagrantMenu.swift in Sources */,
 				C5088F5E1ACA048000F50980 /* Host.swift in Sources */,
 				C5FA82D21ACAECF20013C54B /* main.swift in Sources */,
 				C5088F601ACA049300F50980 /* Staging.swift in Sources */,
 				C57DDE6F1AC5C5E90001E689 /* AppDelegate.swift in Sources */,
 				C57DDE981AC6EF690001E689 /* STPrivilegedTask.m in Sources */,
+				C5D9B0641AD2E07E00862C80 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
